@@ -1,50 +1,58 @@
-<div id="contenedor-login" class="col-sm-12">
+<div id="contenedorLogin" class="col-sm-12">
   <div class="row">
-    <div class="col-sm-6" style="text-align: center;">
-      <img id="logo_imd" src="src\assets\logos\logo_imd.png" height="auto" width="60%" alt="logo_imd">
-
-    </div>
-    <div class="col-sm-6 d-flex align-items-center" style="border-left: 1px solid rgb(117, 119, 117)">
+    <div id="contenedorImgIntro" class="col-sm-6" style="text-align: center;">
       <div class="col-sm-12">
-
-      
-      <div class="form-group col-sm-6" style="text-align: center">
-        <img src="src\assets\logos\logo_imd_app.png" height="auto" width="100px" alt="logo_imd_app">
+        <img id="logoImd" src="src\assets\logos\logo_imd.png" height="150px" width="150px" alt="logo_imd">
+        <h3 style="color: rgb(96, 97, 96)"><i style="color: rgb(141, 143, 141)">"The future is</i> Digital<i style="color: rgb(141, 143, 141)">"</i>
+        </h3>
+      </div>
+      <img id="logoMarketing" src="src\assets\img\marketing.png" height="auto" width="auto" alt="logo_imd">
+    </div>
+    <div id="contenedorInputs" class="col-sm-6 d-flex align-items-center" >
+      <div class="col-sm-12">
+        <div class="form-group col-sm-6" style="text-align: center">
+          <img src="src\assets\logos\logo_imd_app.png" height="auto" width="100px" alt="logo_imd_app">
           <h5 style="color: rgb(133, 130, 130)">Ingresar con IMDCuenta</h5>
-          
-
-      </div>
-      <form action="">
-      <div class="form-group col-sm-6">
-        <input type="text"
-          class="form-control " name="" id="" aria-describedby="helpId" placeholder="Usuario">
-      </div>
-      <div class="form-group col-sm-6">
-        <input type="password"
-          class="form-control" name="" id="" aria-describedby="helpId" placeholder="Contraseña***">
         </div>
-        <div class="form-group col-sm-6">
-            <div class="row">
-                <div class="form-group col-sm-4">
-                    <button class="btn btn-outline-danger" (click)='goToHome()'>Ingresar</button>
+        <form action="">
+          <div class="input-group col-sm-6">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            
+            <div class="input-group col-sm-6" style="margin-top: 10px;">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Enter Password" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+          
+          
+          <div class="form-group col-sm-6" style="margin-top: 10px;">
+            <button class="btn btn-danger col-sm-12" (click)='goToHome()'>Ingresar</button>
 
-                  </div>
-                  <div class="form-group col-sm-8" style="margin-top: 5px;">
-                      <a href="" >Crear cuenta nueva.</a>
-
-                    </div>
+          </div>
+          <div class="form-group col-sm-6">
+            <div class="row" style="text-align: center;">
+              <div class="col-sm-4" style="text-align: center; margin-top: 10px; font-weight: bold;">
+                @imDigital
+              </div>
+              <div class="col-sm-2">
+                <img src="src\assets\social\logo_facebook.png" alt="" width="50px" height="50px">
+              </div>
+              <div class="col-sm-2"><img src="src\assets\social\logo_instagram.png" alt="" width="50px" height="50px"></div>
+              <div class="col-sm-2"> <img src="src\assets\social\logo_twitter.png" alt="" width="50px" height="50px">
+              </div>
 
             </div>
-            <small style="color: rgb(119, 121, 119)">            Al dar click en crear cuenta estas aceptando los <b> términos y condiciones</b> de nuestra compañía.
-            </small>
 
 
-        </div>
-      </form>
+          </div>
+
+        </form>
       </div>
-  </div>
+    </div>
   </div>
 </div>
-
-
-
