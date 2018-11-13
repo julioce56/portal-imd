@@ -8,6 +8,7 @@ import { HeaderComponent } from './core/shared/header/header.component';
 import { LoginComponent } from './core/components/login/login.component';
 import { HomeComponent } from './core/components/home/home.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { ImdAppComponent } from './core/components/imd-app/imd-app.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     LoginComponent,
     HomeComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ImdAppComponent
   ],
   imports: [
     BrowserModule,
