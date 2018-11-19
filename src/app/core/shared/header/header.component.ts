@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  opcion = 'Tipo de Consulta';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectOption (opc: string) {
+    this.opcion = opc;
   }
 
 }

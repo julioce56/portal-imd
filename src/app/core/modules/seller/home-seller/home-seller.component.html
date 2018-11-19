@@ -1,4 +1,75 @@
-<p>
-  home-seller works!
-</p>
+<div class="col-sm-12" style="padding: 20px 20px;">
+  <h3><i class="fa fa-pencil"></i> Construir consulta</h3>
+</div>
+<div class="col-sm-12">
+  <div class="row">
+    <select class="form-group selectpicker col-sm-4" data-show-subtext="true" data-live-search="true">
+      <option>-- Seleccione Vendedor --</option>
+      <option>2006 - Adriana Quartas Rojas</option>
+      <option>2105 - Victor Valdez Muñoz</option>
+      <option>2204 - Mauricio Lopez Castañeda</option>
+      <option>2407 - Carlos Isaza Casas</option>
+      <option>2503 - Lina Gomez Salas</option>
+    </select>
 
+    <div class="form-group col-sm-3">
+      <input type="date" class="form-control" name="dateStartDay" id="dateStartDay" aria-describedby="helpId"
+        placeholder="">
+      <small>Día inicial</small>
+    </div>
+    <div class="form-group col-sm-3">
+      <input type="date" class="form-control" name="dateEndDay" id="dateEndDay" aria-describedby="helpId" placeholder="">
+      <small>Día final</small>
+    </div>
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-info" (click)="showTable()"><i class="fa fa-search"></i></button>
+      <button class="btn btn-outline-info" style="margin-left: 3px;" *ngIf="showMapButton"><i class="fa fa-map"></i></button>
+    </div>
+  </div>
+  <div class="col-sm-12" *ngIf="show" style="margin-bottom: 10px">
+    <table class="table" *ngIf="show">
+      <thead>
+        <tr>
+          <th scope="col"># Reg</th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Proveedor</th>
+          <th scope="col">Foto</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>003 Merkahorro</td>
+          <td>001 - Familia</td>
+          <td><a href=""><i class="fa fa-image"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>004 Carulla</td>
+          <td>003 - J & J</td>
+          <td><a href=""><i class="fa fa-image"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>001 Exito</td>
+          <td>002 - Natipan</td>
+          <td><a href=""><i class="fa fa-image"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>002 Metro</td>
+          <td>006 - El Caribe</td>
+          <td><a href=""><i class="fa fa-image"></i></a></td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>005 Dinastía</td>
+          <td>005 - Axion</td>
+          <td><a href=""><i class="fa fa-image"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-danger"><i class="fa fa-print"></i></button>
+    <button type="button" class="btn btn-success" style="margin-left: 5px;"><i class="fa fa-file-excel-o"></i></button>
+  </div>
+</div>

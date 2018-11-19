@@ -16,12 +16,12 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 10px;">
-            Tipo de consulta
+            {{opcion}}
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" [routerLink]="['seller']" routerLinkActive="router-link-active" >Vendedor</a>
-            <a class="dropdown-item" [routerLink]="['client']" routerLinkActive="router-link-active" >Cliente</a>
-            <a class="dropdown-item" [routerLink]="['supplier']" routerLinkActive="router-link-active" >Proveedor</a>
+            <a class="dropdown-item" [routerLink]="['seller']" routerLinkActive="router-link-active" (click)="selectOption('Vendedor')">Vendedor</a>
+            <a class="dropdown-item" [routerLink]="['client']" routerLinkActive="router-link-active" (click)="selectOption('Cliente')">Cliente</a>
+            <a class="dropdown-item" [routerLink]="['supplier']" routerLinkActive="router-link-active" (click)="selectOption('Proveedor')">Proveedor</a>
           </div>
         </li>
       </ul>
