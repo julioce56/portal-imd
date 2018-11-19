@@ -6,27 +6,53 @@ declare var $: any;
   templateUrl: './home-seller.component.html',
   styleUrls: ['./home-seller.component.scss']
 })
+
 export class HomeSellerComponent implements OnInit {
 
-  show: boolean;
-  showMapButton: boolean;
+  show = false;
+  showMapButton = false;
+  dataArray = [
+    {
+      vendedor: '2105 - Victor Valdez Muñoz',
+      cliente: '001 Exito',
+      proveedor: '001 - Familia'
+    },
+    {
+      vendedor: '2006 - Adriana Quartas Rojas',
+      cliente: '003 Merkahorro',
+      proveedor: '003 - J & J'
+    },
+    {
+      vendedor: '2204 - Mauricio Lopez Castañeda',
+      cliente: '005 Dinastía',
+      proveedor: '002 - Natipan'
+    },
+    {
+      vendedor: '2503 - Lina Gomez Salas',
+      cliente: '004 Carulla',
+      proveedor: '006 - El Caribe'
+    },
+    {
+      vendedor: '2407 - Carlos Isaza Casas',
+      cliente: '002 Metro',
+      proveedor: '005 - Axion'
+    }
+  ];
 
   constructor() {
-    this.show = false;
-    this.showMapButton = false;
   }
 
   ngOnInit() {
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('.selectpicker').selectpicker({
-           style: 'btn-info',
-           size: 4
-          });
-          });
+        style: 'btn-info',
+        size: 4
+      });
+    });
   }
 
-  showTable () {
+  showTable() {
     this.show = true;
     const date1 = $('#dateEndDay').val();
     const date2 = $('#dateStartDay').val();

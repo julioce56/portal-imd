@@ -11,7 +11,6 @@
       <option>005 - Axion</option>
       <option>006 - El Caribe</option>
     </select>
-
     <div class="form-group col-sm-3">
       <input type="date" class="form-control" name="dateStartDay" id="dateStartDay" aria-describedby="helpId"
         placeholder="">
@@ -36,35 +35,11 @@
           <th scope="col">Foto</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody *ngFor="let n of dataArray, let i = index">
         <tr>
-          <th scope="row">1</th>
-          <td>2006 - Adriana Quartas Rojas</td>
-          <td>003 Merkahorro</td>
-          <td><a href=""><i class="fa fa-image"></i></a></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>2105 - Victor Valdez Muñoz</td>
-          <td>004 Carulla</td>
-          <td><a href=""><i class="fa fa-image"></i></a></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>2204 - Mauricio Lopez Castañeda</td>
-          <td>001 Exito</td>
-          <td><a href=""><i class="fa fa-image"></i></a></td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>2407 - Carlos Isaza Casas</td>
-          <td>002 Metro</td>
-          <td><a href=""><i class="fa fa-image"></i></a></td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>2503 - Lina Gomez Salas</td>
-          <td>005 Dinastía</td>
+          <th scope="row">{{i+1}}</th>
+          <td>{{n.vendedor}}</td>
+          <td>{{n.cliente}}</td>
           <td><a href=""><i class="fa fa-image"></i></a></td>
         </tr>
       </tbody>

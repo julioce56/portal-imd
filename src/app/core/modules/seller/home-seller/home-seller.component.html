@@ -36,35 +36,11 @@
           <th scope="col">Foto</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody *ngFor="let n of dataArray, let i = index">
         <tr>
-          <th scope="row">1</th>
-          <td>003 Merkahorro</td>
-          <td>001 - Familia</td>
-          <td><a href=""><i class="fa fa-image"></i></a></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>004 Carulla</td>
-          <td>003 - J & J</td>
-          <td><a href=""><i class="fa fa-image"></i></a></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>001 Exito</td>
-          <td>002 - Natipan</td>
-          <td><a href=""><i class="fa fa-image"></i></a></td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>002 Metro</td>
-          <td>006 - El Caribe</td>
-          <td><a href=""><i class="fa fa-image"></i></a></td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>005 Dinastía</td>
-          <td>005 - Axion</td>
+          <th scope="row">{{i+1}}</th>
+          <td>{{n.cliente}}</td>
+          <td>{{n.proveedor}}</td>
           <td><a href=""><i class="fa fa-image"></i></a></td>
         </tr>
       </tbody>
