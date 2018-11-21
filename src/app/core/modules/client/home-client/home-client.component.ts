@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 declare var $: any;
 
 @Component({
@@ -8,7 +9,7 @@ declare var $: any;
 })
 
 export class HomeClientComponent implements OnInit {
-
+  
   show = false;
   showMapButton = false;
   dataArray = [
@@ -50,6 +51,8 @@ export class HomeClientComponent implements OnInit {
       });
     });
   }
+
+  
 
   showTable() {
     this.show = true;

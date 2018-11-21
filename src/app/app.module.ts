@@ -9,6 +9,8 @@ import { LoginComponent } from './core/components/login/login.component';
 import { HomeComponent } from './core/components/home/home.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ImdAppComponent } from './core/components/imd-app/imd-app.component';
+import { AgmCoreModule } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { ImdAppComponent } from './core/components/imd-app/imd-app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCnCfe0UFQA8Yi4V2d_L8HBEy4CKaK7Y_Q&'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

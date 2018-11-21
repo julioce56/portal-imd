@@ -7,7 +7,7 @@ import { HomeClientComponent } from './home-client/home-client.component';
 @NgModule({
   imports: [
     CommonModule,
-    ClientRoutingModule
+    ClientRoutingModule,
   ],
   declarations: [HomeClientComponent]
 })
