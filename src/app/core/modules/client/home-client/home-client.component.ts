@@ -50,9 +50,14 @@ export class HomeClientComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    $(document).ready(function () {
+      $('.selectpicker').selectpicker({
+        style: 'btn-info',
+        size: 4
+      });
+    });
   }
-
-
 
   showTable() {
     this.show = true;

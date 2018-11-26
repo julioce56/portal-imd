@@ -41,6 +41,12 @@ export class HomeSupplierComponent implements OnInit {
     }
   ];
 
+  imgArray: string[] = [
+    'src/assets/fotos/m1.jpg',
+    'src/assets/fotos/m2.jpg',
+    'src/assets/fotos/m3.jpg'
+  ];
+
   constructor() {
   }
 

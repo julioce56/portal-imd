@@ -23,7 +23,7 @@
     </div>
     <div class="col-sm-2">
       <button type="submit" class="btn btn-info" (click)="showTable()"><i class="fa fa-search"></i></button>
-      <button class="btn btn-outline-info" style="margin-left: 3px;" *ngIf="showMapButton"><i class="fa fa-map"></i></button>
+      <button class="btn btn-outline-info" style="margin-left: 3px;" *ngIf="showMapButton" data-toggle="modal" data-target=".bd-example2-modal-lg"><i class="fa fa-map"></i></button>
     </div>
   </div>
   <div class="col-sm-12" *ngIf="show" style="margin-bottom: 10px">
@@ -41,11 +41,14 @@
           <th scope="row">{{i+1}}</th>
           <td>{{n.cliente}}</td>
           <td>{{n.proveedor}}</td>
-          <td><a href=""><i class="fa fa-image"></i></a></td>
+          <td><a href="" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-image"></i></a></td>
         </tr>
       </tbody>
     </table>
     <button type="button" class="btn btn-danger"><i class="fa fa-print"></i></button>
     <button type="button" class="btn btn-success" style="margin-left: 5px;"><i class="fa fa-file-excel-o"></i></button>
   </div>
+  <app-galery-modal [(getArray)]="imgArray"></app-galery-modal>
+  <app-map-modal></app-map-modal>
 </div>
+

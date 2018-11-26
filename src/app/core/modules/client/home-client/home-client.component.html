@@ -48,21 +48,6 @@
     <button type="button" class="btn btn-danger"><i class="fa fa-print"></i></button>
     <button type="button" class="btn btn-success" style="margin-left: 5px;"><i class="fa fa-file-excel-o"></i></button>
   </div>
-
   <app-galery-modal [(getArray)]="imgArray"></app-galery-modal>
-
-  
-  <div class="modal fade bd-example2-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title"><i class="fa fa-map-marker"></i> TRAZADO DE RUTAS RECORRIDAS</h5>
-        </div>
-        <div class="modal-body">
-          <img src="src/assets/img/map.png" alt="" width="100%" height="400px">
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-map-modal></app-map-modal>
 </div>

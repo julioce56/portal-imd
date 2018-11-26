@@ -8,26 +8,30 @@ declare var $: any;
 })
 export class GaleryModalComponent implements OnInit {
 
+  // Recibimos el array que contiene las rutas de las imagenes.
   @Input() set getArray(arr: any) {
     this.imgArray = arr;
     this.changeImageArray.emit(this.imgArray);
     console.log(this.imgArray, 'set');
   }
-
   imgArray: string[] = [];
 
+  // Mantenemos los cambios sobre este array 2dataBinding.
   @Output() changeImageArray: EventEmitter<Array<any>> = new EventEmitter<Array<any>>();
 
   constructor() {
-    console.log(this.imgArray);
   }
 
   ngOnInit() {
+
     const array = this.imgArray;
     $(document).ready(function () {
       addImgToModal();
     });
 
+    /* Con esta función agregamos la imagen al modal y creamos la configuración para que se 
+     * comporte automatico
+     */
     function addImgToModal() {
       for (let i = 0; i < array.length; i++) {
         if (i === 0) {
