@@ -9,7 +9,7 @@ declare var $: any;
 })
 
 export class HomeClientComponent implements OnInit {
-  
+
   show = false;
   showMapButton = false;
   dataArray = [
@@ -40,19 +40,19 @@ export class HomeClientComponent implements OnInit {
     }
   ];
 
+  imgArray: string[] = [
+    'src/assets/fotos/m1.jpg',
+    'src/assets/fotos/m2.jpg',
+    'src/assets/fotos/m3.jpg'
+  ];
+
   constructor() {
   }
 
   ngOnInit() {
-    $(document).ready(function () {
-      $('.selectpicker').selectpicker({
-        style: 'btn-info',
-        size: 4
-      });
-    });
   }
 
-  
+
 
   showTable() {
     this.show = true;

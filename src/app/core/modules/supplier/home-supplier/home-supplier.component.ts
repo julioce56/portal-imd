@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderComponent } from 'src/app/core/shared/header/header.component';
 declare var $: any;
 
 @Component({
@@ -8,6 +9,7 @@ declare var $: any;
 })
 
 export class HomeSupplierComponent implements OnInit {
+
 
   show = false;
   showMapButton = false;
@@ -43,6 +45,7 @@ export class HomeSupplierComponent implements OnInit {
   }
 
   ngOnInit() {
+
     $(document).ready(function () {
       $('.selectpicker').selectpicker({
         style: 'btn-info',
