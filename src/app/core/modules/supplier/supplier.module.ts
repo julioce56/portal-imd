@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { SupplierRoutingModule } from './supplier-routing.module';
 import { HomeSupplierComponent } from './home-supplier/home-supplier.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    SupplierRoutingModule
+    SupplierRoutingModule,
+    SharedModule
   ],
   declarations: [HomeSupplierComponent]
 })

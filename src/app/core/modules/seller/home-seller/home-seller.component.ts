@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 declare var $: any;
 
 @Component({
@@ -37,6 +38,12 @@ export class HomeSellerComponent implements OnInit {
       cliente: '002 Metro',
       proveedor: '005 - Axion'
     }
+  ];
+
+  imgArray: string[] = [
+    'src/assets/fotos/m1.jpg',
+    'src/assets/fotos/m2.jpg',
+    'src/assets/fotos/m3.jpg'
   ];
 
   constructor() {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderComponent } from 'src/app/core/shared/header/header.component';
 declare var $: any;
 
 @Component({
@@ -8,6 +9,7 @@ declare var $: any;
 })
 
 export class HomeSupplierComponent implements OnInit {
+
 
   show = false;
   showMapButton = false;
@@ -39,10 +41,17 @@ export class HomeSupplierComponent implements OnInit {
     }
   ];
 
+  imgArray: string[] = [
+    'src/assets/fotos/m1.jpg',
+    'src/assets/fotos/m2.jpg',
+    'src/assets/fotos/m3.jpg'
+  ];
+
   constructor() {
   }
 
   ngOnInit() {
+
     $(document).ready(function () {
       $('.selectpicker').selectpicker({
         style: 'btn-info',
