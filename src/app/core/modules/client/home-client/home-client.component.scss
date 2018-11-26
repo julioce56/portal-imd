@@ -1,0 +1,25 @@
+.text-table {
+    font-size: 10pt;
+    text-align: center;
+}
+
+.header-table {
+    width: 100%;
+    display: flex;
+}
+
+.export-button {
+    width: 50%;
+    text-align: left;
+
+    button {
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+}
+
+.search-option {
+    width: 50%;
+    text-align: right;
+}
