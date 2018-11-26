@@ -15,33 +15,33 @@ export class HomeClientComponent implements OnInit {
   cols: any;
   dataArray = [
     {
-      reg: '1',
+      id: '1',
       vendedor: '2105 - Victor Valdez Muñoz',
-      cliente: '001 Exito',
+      nombre: '001 Exito',
       proveedor: '001 - Familia'
     },
     {
-      reg: '2',
+      id: '2',
       vendedor: '2006 - Adriana Quartas Rojas',
-      cliente: '003 Merkahorro',
+      nombre: '003 Merkahorro',
       proveedor: '003 - J & J'
     },
     {
-      reg: '3',
+      id: '3',
       vendedor: '2204 - Mauricio Lopez Castañeda',
-      cliente: '005 Dinastía',
+      nombre: '005 Dinastía',
       proveedor: '002 - Natipan'
     },
     {
-      reg: '4',
+      id: '4',
       vendedor: '2503 - Lina Gomez Salas',
-      cliente: '004 Carulla',
+      nombre: '004 Carulla',
       proveedor: '006 - El Caribe'
     },
     {
-      reg: '5',
+      id: '5',
       vendedor: '2407 - Carlos Isaza Casas',
-      cliente: '002 Metro',
+      nombre: '002 Metro',
       proveedor: '005 - Axion'
     }
   ];
@@ -68,7 +68,7 @@ export class HomeClientComponent implements OnInit {
 
   createColumns(): void {
     this.cols = [
-      { field: 'reg', header: '# Reg' },
+      { field: 'id', header: '# Reg' },
       { field: 'vendedor', header: 'Vendedor' },
       { field: 'proveedor', header: 'Proveedor' },
       { field: 'foto', header: 'Foto' }
