@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { timeout } from 'q';
 declare var $: any;
 
 @Component({
@@ -46,10 +47,12 @@ export class HomeSellerComponent implements OnInit {
     'src/assets/fotos/m3.jpg'
   ];
 
-  constructor() {
-  }
+  arrayModalTitle: string[] = [];
+
+  constructor() { }
 
   ngOnInit() {
+
 
     $(document).ready(function () {
       $('.selectpicker').selectpicker({
@@ -57,6 +60,12 @@ export class HomeSellerComponent implements OnInit {
         size: 4
       });
     });
+
+
+  }
+
+  sendDataToTitle(data: string) {
+    this.arrayModalTitle.push(data);
   }
 
   showTable() {
