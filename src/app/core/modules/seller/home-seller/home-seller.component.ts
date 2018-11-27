@@ -53,14 +53,12 @@ export class HomeSellerComponent implements OnInit {
 
   ngOnInit() {
 
-
     $(document).ready(function () {
       $('.selectpicker').selectpicker({
         style: 'btn-info',
         size: 4
       });
     });
-
 
   }
 
