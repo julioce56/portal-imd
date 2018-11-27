@@ -3,16 +3,19 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title"><i class="fa fa-image"></i> [Reg#] Galeria de Fotos.</h5>
+          <h5 id="modalTitle" class="modal-title">
+            <i class="fa fa-image"></i>  {{ modalTitleVar[modalTitleVar.length - 1] }}
+          </h5>
         </div>
         <div class="modal-body">
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol id="indModalDiv" class="carousel-indicators" >
+            <ol id="indModalDiv" class="carousel-indicators">
+              <li *ngFor="let image of imgArray; let i = index;" data-target="#carouselExampleIndicators" data-slide-to="i" [ngClass]="{'active': i === 0}"></li>
             </ol>
-            
             <div id="fotoModalDiv" class="carousel-inner">
-              
-              
+              <div *ngFor="let image of imgArray; let i = index;" [ngClass]="{'active': i === 0}" class="carousel-item">
+                <img class="d-block w-100" src="{{ image }}" alt="Second slide" height="400px" width="300px">
+              </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>

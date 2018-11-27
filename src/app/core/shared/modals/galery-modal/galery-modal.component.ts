@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { start } from 'repl';
 declare var $: any;
 
 @Component({
@@ -14,47 +15,26 @@ export class GaleryModalComponent implements OnInit {
     this.changeImageArray.emit(this.imgArray);
     console.log(this.imgArray, 'set');
   }
+
+  @Input() set modalTitle(arr: any) {
+    this.modalTitleVar = arr;
+    this.changeModalTitle.emit(this.modalTitleVar);
+    console.log(this.modalTitleVar, 'set modal');
+  }
   imgArray: string[] = [];
+  modalTitleVar: string[] = [];
 
   // Mantenemos los cambios sobre este array 2dataBinding.
   @Output() changeImageArray: EventEmitter<Array<any>> = new EventEmitter<Array<any>>();
+
+  @Output() changeModalTitle: EventEmitter<Array<any>> = new EventEmitter<Array<any>>();
 
   constructor() {
   }
 
   ngOnInit() {
-
     const array = this.imgArray;
-    $(document).ready(function () {
-      addImgToModal();
-    });
-
-    /* Con esta función agregamos la imagen al modal y creamos la configuración para que se 
-     * comporte automatico
-     */
-    function addImgToModal() {
-      for (let i = 0; i < array.length; i++) {
-        if (i === 0) {
-          $('#indModalDiv').append(
-            '<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>'
-          );
-          $('#fotoModalDiv').append(
-            '<div class="carousel-item active">\
-              <img class="d-block w-100" src="' + array[i] + '" alt="Second slide" height="400px" width="300px">\
-            </div>'
-            );
-        } else {
-          $('#fotoModalDiv').append(
-            '<div class="carousel-item">\
-              <img class="d-block w-100" src="' + array[i] + '" alt="Second slide" height="400px" width="300px">\
-            </div>'
-            );
-            $('#indModalDiv').append(
-              '<li data-target="#carouselExampleIndicators" data-slide-to="0"></li>'
-            );
-        }
-      }
-    }
+    const modalTitle = this.modalTitleVar;
   }
 
 }
