@@ -68,12 +68,10 @@ export class HomeClientComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
   sendDataToTitle(data: string) {
     this.arrayModalTitle.push(data);
   }
 
-=======
   createColumns(): void {
     this.cols = [
       { field: 'id', header: '# Reg' },
@@ -83,9 +81,6 @@ export class HomeClientComponent implements OnInit {
     ];
   }
 
-
-
->>>>>>> b32562a1257936345ff024500e4f8f4ecef0dca2
   showTable() {
     this.show = true;
     const date1 = $('#dateEndDay').val();
