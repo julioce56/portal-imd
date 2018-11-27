@@ -12,7 +12,7 @@ export class HomeClientComponent implements OnInit {
 
   show = false;
   showMapButton = false;
-  cols: any;
+  public cols: any;
   dataArray = [
     {
       id: '1',
