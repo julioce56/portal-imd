@@ -12,30 +12,36 @@ export class HomeClientComponent implements OnInit {
 
   show = false;
   showMapButton = false;
+  cols: any;
   dataArray = [
     {
+      id: '1',
       vendedor: '2105 - Victor Valdez Muñoz',
-      cliente: '001 Exito',
+      nombre: '001 Exito',
       proveedor: '001 - Familia'
     },
     {
+      id: '2',
       vendedor: '2006 - Adriana Quartas Rojas',
-      cliente: '003 Merkahorro',
+      nombre: '003 Merkahorro',
       proveedor: '003 - J & J'
     },
     {
+      id: '3',
       vendedor: '2204 - Mauricio Lopez Castañeda',
-      cliente: '005 Dinastía',
+      nombre: '005 Dinastía',
       proveedor: '002 - Natipan'
     },
     {
+      id: '4',
       vendedor: '2503 - Lina Gomez Salas',
-      cliente: '004 Carulla',
+      nombre: '004 Carulla',
       proveedor: '006 - El Caribe'
     },
     {
+      id: '5',
       vendedor: '2407 - Carlos Isaza Casas',
-      cliente: '002 Metro',
+      nombre: '002 Metro',
       proveedor: '005 - Axion'
     }
   ];
@@ -49,6 +55,7 @@ export class HomeClientComponent implements OnInit {
   arrayModalTitle: string[] = [];
 
   constructor() {
+    this.createColumns();
   }
 
   ngOnInit() {
@@ -61,10 +68,24 @@ export class HomeClientComponent implements OnInit {
     });
   }
 
+<<<<<<< HEAD
   sendDataToTitle(data: string) {
     this.arrayModalTitle.push(data);
   }
 
+=======
+  createColumns(): void {
+    this.cols = [
+      { field: 'id', header: '# Reg' },
+      { field: 'vendedor', header: 'Vendedor' },
+      { field: 'proveedor', header: 'Proveedor' },
+      { field: 'foto', header: 'Foto' }
+    ];
+  }
+
+
+
+>>>>>>> b32562a1257936345ff024500e4f8f4ecef0dca2
   showTable() {
     this.show = true;
     const date1 = $('#dateEndDay').val();
