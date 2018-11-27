@@ -47,6 +47,8 @@ export class HomeSupplierComponent implements OnInit {
     'src/assets/fotos/m3.jpg'
   ];
 
+  arrayModalTitle: string[] = [];
+
   constructor() {
   }
 
@@ -58,6 +60,10 @@ export class HomeSupplierComponent implements OnInit {
         size: 4
       });
     });
+  }
+
+  sendDataToTitle(data: string) {
+    this.arrayModalTitle.push(data);
   }
 
   showTable() {

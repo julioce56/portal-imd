@@ -41,13 +41,13 @@
           <th scope="row">{{i+1}}</th>
           <td>{{n.vendedor}}</td>
           <td>{{n.proveedor}}</td>
-          <td><a href="" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fa fa-image"></i></a></td>
+          <td><a href="" data-toggle="modal" data-target=".bd-example-modal-lg" (click)="sendDataToTitle(n.vendedor)"><i class="fa fa-image"></i></a></td>
         </tr>
       </tbody>
     </table>
     <button type="button" class="btn btn-danger"><i class="fa fa-print"></i></button>
     <button type="button" class="btn btn-success" style="margin-left: 5px;"><i class="fa fa-file-excel-o"></i></button>
   </div>
-  <app-galery-modal [(getArray)]="imgArray"></app-galery-modal>
+  <app-galery-modal [(getArray)]="imgArray" [(modalTitle)]="arrayModalTitle"></app-galery-modal>
   <app-map-modal></app-map-modal>
 </div>
