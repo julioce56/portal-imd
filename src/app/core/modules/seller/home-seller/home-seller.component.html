@@ -1,0 +1,54 @@
+<div class="col-sm-12" style="padding: 20px 20px;">
+  <h3><i class="fa fa-cogs"></i> Construir consulta</h3>
+</div>
+<div class="col-sm-12">
+  <div class="row">
+    <select class="form-group selectpicker col-sm-4" data-show-subtext="true" data-live-search="true">
+      <option>-- Seleccione Vendedor --</option>
+      <option>2006 - Adriana Quartas Rojas</option>
+      <option>2105 - Victor Valdez Muñoz</option>
+      <option>2204 - Mauricio Lopez Castañeda</option>
+      <option>2407 - Carlos Isaza Casas</option>
+      <option>2503 - Lina Gomez Salas</option>
+    </select>
+
+    <div class="form-group col-sm-3">
+      <input type="date" class="form-control" name="dateStartDay" id="dateStartDay" aria-describedby="helpId"
+        placeholder="">
+      <small>Día inicial</small>
+    </div>
+    <div class="form-group col-sm-3">
+      <input type="date" class="form-control" name="dateEndDay" id="dateEndDay" aria-describedby="helpId" placeholder="">
+      <small>Día final</small>
+    </div>
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-info" (click)="showTable()"><i class="fa fa-search"></i></button>
+      <button class="btn btn-outline-info" style="margin-left: 3px;" *ngIf="showMapButton" data-toggle="modal" data-target=".bd-example2-modal-lg"><i class="fa fa-map"></i></button>
+    </div>
+  </div>
+  <div class="col-sm-12" *ngIf="show" style="margin-bottom: 10px">
+    <table class="table" *ngIf="show">
+      <thead>
+        <tr>
+          <th scope="col"># Reg</th>
+          <th scope="col">Cliente</th>
+          <th scope="col">Proveedor</th>
+          <th scope="col">Foto</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let n of dataArray, let i = index">
+        <tr>
+          <th scope="row">{{i+1}}</th>
+          <td>{{n.cliente}}</td>
+          <td>{{n.proveedor}}</td>
+          <td><a href="" data-toggle="modal" data-target=".bd-example-modal-lg" (click)="sendDataToTitle(n.cliente)"><i class="fa fa-image"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-danger"><i class="fa fa-print"></i></button>
+    <button type="button" class="btn btn-success" style="margin-left: 5px;"><i class="fa fa-file-excel-o"></i></button>
+  </div>
+  <app-galery-modal [(getArray)]="imgArray" [(modalTitle)]="arrayModalTitle"></app-galery-modal>
+  <app-map-modal></app-map-modal>
+</div>
+

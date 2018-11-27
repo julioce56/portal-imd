@@ -1,0 +1,33 @@
+<nav id="headerNav" class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgb(233, 231, 231);">
+  <a class="navbar-brand" [routerLink]="['imdApp']" routerLinkActive="router-link-active" >
+    <img src="src/assets/logos/logo_imd_app.png" alt="logoImdApp" height="50px" width="50px">
+    IMDigital-App
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/home']" routerLinkActive="router-link-active" ><i class="fa fa-home fa-2x"></i> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['']" routerLinkActive="router-link-active" ><i class="fa fa-download fa-2x "></i></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding-top: 10px;">
+          {{opcion}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" [routerLink]="['seller']" routerLinkActive="router-link-active" >Vendedor</a>
+          <a class="dropdown-item" [routerLink]="['client']" routerLinkActive="router-link-active" >Cliente</a>
+          <a class="dropdown-item" [routerLink]="['supplier']" routerLinkActive="router-link-active" >Proveedor</a>
+        </div>
+      </li>
+    </ul>
+    
+        <h5 class="navbar-text ml-auto ">imdUser <i class="fa fa-user"></i></h5>
+     
+  </div>
+</nav>
+
